@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SASU TOP UP — Démo</title>
+<style>
+:root{--bg:#070d20;--panel:#101b38;--panel2:#0c1530;--blue:#168cff;--cyan:#39d7ff;--gold:#ffc928;--text:#f4f7ff;--muted:#aebbd7}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#123d85 0,#070d20 48%);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#070d20ed;border-bottom:1px solid #174d9b;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:clamp(18px,3vw,26px);letter-spacing:.5px}.gem{font-size:34px;filter:drop-shadow(0 0 12px #19aaff)}.brand span:last-child{color:var(--gold)}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:#dce8ff;text-decoration:none;font-weight:700;font-size:14px}
+.hero{padding:52px 5% 34px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;max-width:1200px;margin:auto}
+.kicker{color:var(--cyan);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(36px,6vw,62px);line-height:1.02;margin:12px 0}h1 em{color:var(--gold);font-style:normal}.lead{color:var(--muted);font-size:17px;line-height:1.6;max-width:580px}
+.hero-art{border:1px solid #1d75d8;border-radius:24px;min-height:230px;background:linear-gradient(145deg,#0b2a61,#10162f 58%,#06204b);display:grid;place-items:center;box-shadow:0 0 45px #087bff30;overflow:hidden}.hero-art div{font-size:clamp(100px,18vw,170px);filter:drop-shadow(0 0 28px #00aaff);animation:float 3s ease-in-out infinite}@keyframes float{50%{transform:translateY(-10px)}}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{border:0;border-radius:12px;padding:13px 18px;font-weight:900;cursor:pointer;background:linear-gradient(90deg,#ffd42d,#ffad00);color:#161a2a}.btn.secondary{background:#102b56;color:#fff;border:1px solid #258fff}
+main{max-width:1200px;margin:auto;padding:0 5% 50px}.layout{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.panel{background:linear-gradient(160deg,#111f42,#0a1229);border:1px solid #1c5eae;border-radius:20px;padding:22px;box-shadow:0 12px 36px #0005}.panel h2{margin:0 0 18px;font-size:22px}.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.pack{border:1px solid #1e6fcb;background:#091632;border-radius:14px;padding:17px 10px;text-align:center;cursor:pointer;transition:.2s}.pack:hover,.pack.selected{border:2px solid var(--gold);background:#10264c;transform:translateY(-2px)}.pack .diamond{font-size:30px}.pack strong{display:block;font-size:22px;color:var(--gold);margin:5px}.pack small{color:var(--muted)}
+label{display:block;font-weight:700;margin:14px 0 7px}input,select{width:100%;padding:13px;border-radius:10px;border:1px solid #31558d;background:#07122b;color:white;font-size:15px}input::placeholder{color:#8494b6}.pay{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}.pay button{padding:13px;border-radius:10px;border:1px solid #3874c1;background:#10264c;color:white;font-weight:800;cursor:pointer}.pay button.selected{border:2px solid var(--gold);background:#183968}.notice{font-size:12px;color:#b8c6e0;line-height:1.5;margin-top:12px}.full{width:100%;margin-top:16px}.status{display:none;margin-top:15px;padding:14px;border-radius:10px;background:#102c26;border:1px solid #2a9e72;color:#baffdc;line-height:1.5}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}.feature{background:#0e1a36;border:1px solid #1c477f;border-radius:14px;padding:16px;text-align:center}.feature b{display:block;margin:8px 0}.muted{color:var(--muted);font-size:13px}
+#admin{margin-top:22px;display:none}table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:10px;border-bottom:1px solid #263d67}footer{text-align:center;color:#93a6ca;padding:26px 5%;border-top:1px solid #16345f;font-size:13px}
+@media(max-width:800px){.hero,.layout{grid-template-columns:1fr}.hero{padding-top:34px}.hero-art{min-height:180px}.packs{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr}nav{gap:10px}nav a{font-size:12px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><span class="gem">💎</span><span>SASU <span>TOP UP</span></span></div>
+  <nav><a href="#accueil">Accueil</a><a href="#packs">Packs</a><a href="#commande">Commander</a><a href="#suivi">Suivi</a></nav>
+</header>
+<section class="hero" id="accueil">
+  <div><div class="kicker">Recharge Free Fire • Version démo</div>
+    <h1>Recharge tes <em>Diamonds</em><br>en toute simplicité.</h1>
+    <p class="lead">Choisis un pack, saisis ton identifiant joueur et crée une commande de test. SASU TOP UP — rapide, clair et facile à utiliser.</p>
+    <div class="actions"><a class="btn" href="#packs" style="text-decoration:none">Voir les packs</a><a class="btn secondary" href="#commande" style="text-decoration:none">Créer une commande</a></div>
+  </div>
+  <div class="hero-art"><div>💎</div></div>
+</section>
+<main>
+ <div class="layout">
+  <section class="panel" id="packs"><h2>💎 Choisis ton pack</h2><div class="packs" id="packList"></div><p class="muted">Prix fictifs pour la démonstration — à remplacer après validation d'un fournisseur autorisé.</p></section>
+  <section class="panel" id="commande"><h2>⚡ Passe ta commande</h2>
+    <form id="orderForm">
+      <label for="uid">Identifiant joueur (UID)</label><input id="uid" required inputmode="numeric" maxlength="24" placeholder="Entre ton UID Free Fire">
+      <label for="nickname">Nom du joueur (facultatif)</label><input id="nickname" maxlength="30" placeholder="Ton pseudo">
+      <label for="chosenPack">Pack sélectionné</label><select id="chosenPack" required></select>
+      <label>Méthode de paiement (simulation)</label>
+      <div class="pay"><button type="button" data-pay="MonCash">MonCash</button><button type="button" data-pay="NatCash">NatCash</button></div>
+      <button class="btn full" type="submit">Créer ma commande démo</button>
+      <p class="notice">⚠️ Démonstration uniquement : aucun paiement n'est effectué, aucun numéro de compte n'est demandé et aucun diamant n'est livré par ce formulaire.</p>
+    </form>
+    <div class="status" id="confirmation" role="status"></div>
+  </section>
+ </div>
+ <section class="panel" id="suivi" style="margin-top:20px"><h2>🔎 Suivre une commande démo</h2><label for="trackId">Numéro de commande</label><input id="trackId" placeholder="Ex. SASU-123456"><button class="btn secondary" id="trackBtn" style="margin-top:10px">Vérifier</button><div class="status" id="trackResult"></div></section>
+ <section class="panel" id="admin"><h2>🛠️ Tableau de bord démo</h2><p class="muted">Les commandes de cette session sont affichées ici. Tu peux changer leur statut pour tester le suivi. Ce tableau n'est pas sécurisé et les données ne sont pas sauvegardées sur un serveur.</p><div style="overflow:auto"><table><thead><tr><th>Commande</th><th>UID</th><th>Pack</th><th>Paiement</th><th>Statut</th></tr></thead><tbody id="orders"></tbody></table></div></section>
+ <div class="features"><div class="feature">⚡<b>Commande simple</b><span class="muted">Quelques étapes faciles</span></div><div class="feature">🔒<b>Mode démonstration</b><span class="muted">Aucun vrai paiement</span></div><div class="feature">🎧<b>Support</b><span class="muted">Ajoute tes coordonnées plus tard</span></div></div>
+</main>
+<footer>© 2026 SASU TOP UP • Prototype de démonstration • Non affilié à Garena / Free Fire.</footer>
+<script>
+const packs=[{d:100,p:1.00},{d:310,p:3.50},{d:520,p:5.50},{d:1060,p:10.50},{d:2180,p:20.00},{d:5600,p:50.00}];
+let selectedPay="";const orders=[];
+const money=n=>"$"+n.toFixed(2)+" USD";
+const packList=document.getElementById("packList"),select=document.getElementById("chosenPack");
+packs.forEach((x,i)=>{const card=document.createElement("button");card.type="button";card.className="pack";card.innerHTML=`<div class="diamond">💎</div><strong>${x.d.toLocaleString("fr-FR")}</strong><small>${money(x.p)}</small>`;card.addEventListener("click",()=>choose(i));packList.append(card);const opt=document.createElement("option");opt.value=i;opt.textContent=`${x.d.toLocaleString("fr-FR")} Diamonds — ${money(x.p)}`;select.append(opt)});
+function choose(i){select.value=i;document.querySelectorAll(".pack").forEach((e,j)=>e.classList.toggle("selected",i===j))}
+choose(0);
+document.querySelectorAll("[data-pay]").forEach(b=>b.addEventListener("click",()=>{selectedPay=b.dataset.pay;document.querySelectorAll("[data-pay]").forEach(x=>x.classList.toggle("selected",x===b))}));
+document.getElementById("orderForm").addEventListener("submit",e=>{e.preventDefault();if(!selectedPay){alert("Choisis MonCash ou NatCash pour la simulation.");return}const p=packs[Number(select.value)];const id="SASU-"+Math.floor(100000+Math.random()*900000);const order={id,uid:document.getElementById("uid").value.trim(),pack:p.d,pay:selectedPay,status:"En attente — démo"};orders.push(order);document.getElementById("confirmation").style.display="block";document.getElementById("confirmation").innerHTML=`Commande créée : <b>${id}</b><br>Pack : ${p.d} Diamonds • ${money(p.p)}<br>Paiement choisi : ${selectedPay}<br>Statut : ${order.status}`;document.getElementById("trackId").value=id;renderOrders();document.getElementById("admin").style.display="block";});
+function renderOrders(){
+ document.getElementById("orders").innerHTML=orders.map((o,i)=>`<tr>
+ <td>${o.id}</td><td>${o.uid.replace(/[&<>"']/g,"")}</td><td>${o.pack} 💎</td><td>${o.pay}</td>
+ <td><select aria-label="Statut de ${o.id}" data-status="${i}">
+ <option ${o.status.startsWith("En attente")?"selected":""}>En attente — démo</option>
+ <option ${o.status==="Traité — démo"?"selected":""}>Traité — démo</option>
+ <option ${o.status==="Annulé — démo"?"selected":""}>Annulé — démo</option>
+ </select></td></tr>`).join("");
+ document.querySelectorAll("[data-status]").forEach(s=>s.addEventListener("change",()=>{
+   orders[Number(s.dataset.status)].status=s.value;
+   const current=document.getElementById("trackId").value.trim();
+   const match=orders.find(x=>x.id===current);
+   if(match){const r=document.getElementById("trackResult");r.style.display="block";r.textContent=`${match.id} — ${match.status}`;}
+ }));
+}
+document.getElementById("trackBtn").addEventListener("click",()=>{const id=document.getElementById("trackId").value.trim();const o=orders.find(x=>x.id===id);const r=document.getElementById("trackResult");r.style.display="block";r.textContent=o?`${o.id} — ${o.status}`:"Commande introuvable dans cette session de démonstration.";});
+</script>
+</body></html>
